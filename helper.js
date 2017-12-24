@@ -14,9 +14,7 @@ function calcTime() {
   hours = hours % 24; 
 
   var compare = new Date(2017, 11, 25)
-  if (today.getFullYear() == compare.getFullYear() && 
-    today.getMonth() == compare.getMonth() && 
-    today.getDay() == compare.getDay()) {
+  if (today >= compare) {
     document.getElementById("present").disabled=false
     document.getElementById("present").className="btn btn-lg btn-primary"
   }
@@ -28,6 +26,7 @@ function calcTime() {
 
 function showPresent() {
   clearTimeout(t); 
+  document.location.href="card.html"
   console.log("Present!")
 }
 
