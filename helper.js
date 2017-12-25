@@ -17,15 +17,17 @@ function calcTime() {
   if (today >= compare) {
     document.getElementById("present").disabled=false
     document.getElementById("present").className="btn btn-lg btn-primary"
+    clearTimeout(t); 
+    document.getElementById("counter").innerHTML = "It's Christmas!"
+
   }
-
-  document.getElementById("counter").innerHTML = days + " days, " + hours + " hours, " + minutes + " minutes, " + seconds + " seconds till Christmas!"
-
-  t = setTimeout(calcTime, 500); 
+  else {
+    document.getElementById("counter").innerHTML = days + " days, " + hours + " hours, " + minutes + " minutes, " + seconds + " seconds till Christmas!"
+    t = setTimeout(calcTime, 500); 
+  }
 } 
 
 function showPresent() {
-  clearTimeout(t); 
   document.location.href="card.html"
   console.log("Present!")
 }
