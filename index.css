@@ -22,5 +22,7 @@ button {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-
+}
+.download_link {
+  font-size: 25px;
 }
