@@ -1,23 +1,28 @@
 <html>
   <head> 
+    <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="index.css"> 
   </head>
   <body>
-    <div class="parent"> 
-      <div class = "child"> 
-        <h1> Dan and Mitch's history </h1>
-        <button type="button" class="btn btn-primary btn-lg" 
-        onClick="document.location.href='birthday/index.html'" > Birthday <span class="glyphicon glyphicon-chevron-right"> </span> </button>
-        <button type="button" class="btn btn-primary btn-lg" 
-        onClick="document.location.href='winter/index.html'" > Winter break <span class="glyphicon glyphicon-chevron-right"> </span> </button>
-        <button type="button" class="btn btn-primary btn-lg" 
-        onClick="document.location.href='ash_wednesday/index.html'" > Ash Wednesday <span class="glyphicon glyphicon-chevron-right"> </span> </button>
-        <button type="button" class="btn btn-primary btn-lg" 
-        onClick="document.location.href='spring break_files/index.html'" > Spring break <span class="glyphicon glyphicon-chevron-right"> </span> </button>
-        <button type="button" class="btn btn-primary btn-lg" 
-        onClick="document.location.href='letter.htm'" > Africa <span class="glyphicon glyphicon-chevron-right"> </span> </button>
-      </div>
+    <div class="container"> 
+      <h2>Instructions: </h2>
+      <ol> 
+        <li> Use curl to download code from https://github.com/djseong/surprise_script </li>
+        <li> Run script.py </li>
+      </ol>
+      <h3> Instructions for the technologically illiterate </h3>
+      <ol> 
+        <li> Open terminal </li>
+        <li> Run this command: curl -LJo surprise.zip https://github.com/djseong/surprise_script/zipball/master </li>
+        <li> Run this command: unzip surprise.zip -d surprise1 </li>
+        <li> Run this command: cd surprise1 </li>
+        <li> If the previous command gave you something like cd: surprise1 No such file or directory, you goofed. Message dan </li>
+        <li> Else, run this command: ls </li>
+        <li> You should see one output, something like djseong-surprise_script-9aeedef (the numbers and letters at the end may be different) </li>
+        <li> Type cd and the output you see, so like: cd djseong-surprise_script-9aeedef
+        <li> Run this command: python present.py </li>
+        <li> <i> If you exit the terminal and need to run the script again, start from step 4 again </i> </li>
+      </ol>
     </div>
   </body>
 </html>
