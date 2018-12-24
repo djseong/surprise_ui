@@ -1,0 +1,23 @@
+body {
+  background: url(img/background.png) no-repeat center bottom #082f3d;
+  background-size: cover;
+}
+.parent {
+  position: relative;
+  height: 100%;
+}
+.child {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 150%);
+}
+#present {
+  display:block; 
+  margin:0 auto; 
+}
+#counter {
+  color: white;
+  text-align: center;
+}
+.card {
+}
