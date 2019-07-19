@@ -1,0 +1,189 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html, body {
+    width: 100%;
+    min-height: 100%;
+  }
+  
+  body {
+    background: linear-gradient(#EFEFEF, #ECE9E6);
+  }
+
+  .parent {
+    margin-top:20px;
+ 
+  }
+  .child {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 150%);
+  }
+
+  #counter {
+    color: black;
+    text-align: center;
+  }
+  
+  .dessert_wrapper {
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+    min-width: 350px;
+    min-height: 400px;
+    height: auto;
+    margin: 5rem auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .candle__wrapper {
+    width: 50%;
+    height: 6.5rem;
+    max-height: 350px;
+    padding: 1rem 0 0 0;
+    margin-bottom: -5%;
+    z-index: 100;
+  }
+  .candle__wrapper .candle__top {
+    position: relative;
+    width: 1.25rem;
+    height: 100%;
+    margin: 0 auto;
+    background: repeating-linear-gradient(-55deg, #d3d7e9, #d3d7e9 0.5rem, #f5f6fa, 0.5rem, #f5f6fa 0.8em);
+    box-shadow: inset 0px 3px 5px 2px #d3d7e9;
+    border-top: none;
+    border-bottom: none;
+    border-radius: 0 0 15% 15%;
+  }
+  .candle__wrapper .candle__top::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 1.25rem;
+    height: 1.25rem;
+    top: -1.5rem;
+    left: -1px;
+    border-radius: 50%;
+    animation: growingflame 2500ms linear infinite;
+  }
+  .candle__wrapper .candle__top::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 1.25rem;
+    height: 1.25rem;
+    top: -1.5rem;
+    left: -1px;
+    background: #F59D00;
+    border-radius: 100% 100% 100% 0;
+    transform: rotate(135deg);
+  }
+  .candle__wrapper .candle__top .candle__stick {
+    z-index: 2;
+    position: absolute;
+    width: 2px;
+    height: 10px;
+    top: -10px;
+    left: calc(1.5em/2 - 4px);
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 50% 50% 0 0;
+  }
+  
+  .frosting__wrapper {
+    z-index: 10;
+    width: 50%;
+    max-height: 250px;
+  }
+  .frosting__wrapper .frosting__bottom, .frosting__wrapper .frosting__top {
+    position: relative;
+    height: 5.5rem;
+    margin: 0 auto;
+    background: #EACA9D;
+    box-shadow: inset -3px -3px 6px #dda85e;
+  }
+  .frosting__wrapper .frosting__top {
+    z-index: 5;
+    width: 85%;
+    margin-bottom: -3.25rem;
+    border-radius: 150% 200% 150% 200%;
+  }
+  .frosting__wrapper .frosting__top::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 60%;
+    height: 4rem;
+    max-width: 8rem;
+    top: -3.45rem;
+    left: 33%;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: -2rem 2rem 0 0 #EACA9D, -42px 47px 6px -13px #dda85e;
+    transform: rotate(6deg);
+  }
+  .frosting__wrapper .frosting__bottom {
+    width: 104%;
+    left: -2%;
+    border-radius: 110% 100% 110% 100%;
+  }
+  
+  .cupcake__wrapper {
+    position: relative;
+    width: 50%;
+    max-height: 200px;
+    margin-top: -2rem;
+    border-bottom: 15px solid transparent;
+  }
+  .cupcake__wrapper .base__cake {
+    z-index: 1;
+    position: absolute;
+    width: 105%;
+    height: 5rem;
+    top: -25%;
+    left: -2.5%;
+    border-radius: 50%;
+    background: #fed570;
+    box-shadow: inset 0px -3px 5px 2px #fecb52;
+  }
+  .cupcake__wrapper .base__main {
+    z-index: -1;
+    width: 100%;
+    height: 7rem;
+    border-radius: 25% 25% 0 0;
+    -webkit-clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
+    background-image: linear-gradient(90deg, #FECD57 50%, #fed570 100%);
+    background-size: 17% 100%;
+    border-bottom: 100px solid transparent;
+  }
+  .cupcake__wrapper .base__bottom {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2rem;
+    z-index: -5;
+    bottom: -1rem;
+    background-image: linear-gradient(90deg, #FECD57 50%, #fed570 100%);
+    background-size: 17% 100%;
+    -webkit-clip-path: ellipse(35% 50% at 50% 50%);
+    clip-path: ellipse(35% 50% at 50% 50%);
+  }
+  
+  @keyframes growingflame {
+    0% {
+      box-shadow: 0 0 1.8rem 0.5rem #ffbb43;
+    }
+    50% {
+      box-shadow: 0 0 1.8rem 1rem #ffb838;
+    }
+    100% {
+      box-shadow: 0 0 1.8rem 0.5rem #ffbb43;
+    }
+  }
+  
