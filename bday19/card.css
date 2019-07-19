@@ -15,13 +15,12 @@ input {
 	left: 50%;
 	top: calc(50% - 250px);
 	
-	box-shadow: 5px 5px 15px 0 #ddd;
+	box-shadow: 5px 5px 5px 0 #ddd;
 }
 
 .pg1 {
 	transform-origin: 0% 50%;
 	z-index: 40;
-	background-image: url("http://www.americanatheatre.org/wp-content/uploads/2015/10/White-sparkeles.jpg");	
 	background-color: #fff;
 }
 	.pg1 .h, .pg1 .bd {
@@ -70,16 +69,30 @@ input {
 }
 	.pg2 .content {
 		height: calc(100% - 44px);
-		transform: rotateY(180deg);
+        transform: rotateY(180deg);
+        font-family: 'Tangerine', cursive;
 	}
 		.pg2 .content .birthday {
 			position: absolute;
-			left: 55%;
-			top: 30%;
-			width: 90%;
-			transform: rotate(-30deg) translateX(-50%) translateY(-50%);
+			left: 50%;
+			top: 22%;
+			width: 100%;
+			transform: translateX(-50%) translateY(-50%);
 			transform-origin: 50% 50%;
-		}
+        }
+        
+        .pg2 .content .lower {
+            top: 80%;
+            width: 49%;
+            left: 25%;
+        }
+
+        .pg2 .content .text {
+            top: 37%;
+            left: 45%; 
+            font-size: 40px;
+            transform: rotate(333deg);
+        }
 
 .pg3 {
 	z-index: 30;
@@ -87,14 +100,15 @@ input {
 	transform-origin: 0% 50%;
 }
 	.pg3 .content {
-		height: calc(100% - 44px);
+		height: calc(100% - 100px);
 		padding-top: 60px;
 		padding-left: 60px;
-		padding-right: 60px;
+        padding-right: 60px;
 		font-family: 'Tangerine', cursive;
-		font-size: 30px;
+		font-size: 27px;
 		font-weight: bold;
-		color:rgba(15, 59, 95, 0.85);
+        color:rgba(15, 59, 95, 0.85);
+        overflow-y: scroll;
 	}
 
 #open:checked ~ .pg1 {
@@ -126,4 +140,8 @@ input {
 		transform: rotateY(-180deg);
 		z-index: 50;
 	}
+}
+
+::-webkit-scrollbar { 
+    display: none; 
 }
